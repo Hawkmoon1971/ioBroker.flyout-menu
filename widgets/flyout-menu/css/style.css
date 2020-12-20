@@ -1,0 +1,99 @@
+/* Style your widget here */
+.flyout-menu-class {
+	font-style: italic;
+}
+
+.side-menu-trigger {
+	font-size: 20px;
+	z-index:999;
+}
+#cordova_menu {
+	width:0;
+	height:0;
+	top:0;
+	left:0;
+	position:absolute;
+}
+
+.panel{
+	background-color: rgb(90,90,90);
+	width: 100%;
+	height:100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	text-align: center;
+
+}
+
+.panel-content {
+	color: #ffffff;
+	text-align:left;
+	padding: 5px;
+	overflow: hidden;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+	display:block;
+	height: 100%;
+	width: 250px;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.25s;
+}
+
+.side-menu-content {
+	width:100%;
+	color: #818181;
+}
+.side-menu-content .side-menu-item{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+	transition: 0.3s;
+	width:100%;
+	height: 40px;
+}
+
+.side-menu-content .side-menu-item:hover{
+	color: #f1f1f1;
+}
+
+.closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.side-menu-trigger {
+	width:48px;
+	height:48px;
+	display:block;
+}
+.side-menu-trigger:before {
+	content:'\2630';
+}
+
+.sidebar-header {
+	width: calc(100% - 55px);
+}
+
+.sidebar-footer {
+	width: 100%;
+	height: 60px;
+}
+
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}

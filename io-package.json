@@ -1,0 +1,84 @@
+{
+	"common": {
+		"name": "flyout-menu",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "flyout-menu widget",
+		"titleLang": {
+			"en": "flyout-menu widget",
+			"de": "Flyout-Menü Widget",
+			"ru": "виджет всплывающего меню",
+			"pt": "widget de menu flutuante",
+			"nl": "flyout-menu widget",
+			"fr": "widget de menu déroulant",
+			"it": "widget del menu a comparsa",
+			"es": "widget de menú desplegable",
+			"pl": "widżet menu wysuwanego",
+			"zh-cn": "弹出菜单小部件"
+		},
+		"desc": {
+			"en": "flyout-menu",
+			"de": "Flyout-Menü",
+			"ru": "всплывающее меню",
+			"pt": "menu flutuante",
+			"nl": "flyout-menu",
+			"fr": "menu déroulant",
+			"it": "menu a comparsa",
+			"es": "menú desplegable",
+			"pl": "menu wysuwane",
+			"zh-cn": "弹出菜单"
+		},
+		"authors": [
+			"hawkoon <hoelkeskamp@googlemail.com>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "flyout-menu.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/hawkoon/ioBroker.flyout-menu/master/admin/flyout-menu.png",
+		"readme": "https://github.com/hawkoon/ioBroker.flyout-menu/blob/master/README.md",
+		"loglevel": "info",
+		"restartAdapters": [
+			"vis"
+		],
+		"localLink": "%web_protocol%://%ip%:%web_port%/vis/edit.html",
+		"mode": "daemon",
+		"type": "visualization",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			},
+			"vis"
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}

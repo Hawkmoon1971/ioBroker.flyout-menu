@@ -1,0 +1,33 @@
+{
+	"cli": true,
+	"adapterName": "flyout-menu",
+	"title": "flyout-menu widget",
+	"expert": "no",
+	"features": [
+		"adapter",
+		"vis"
+	],
+	"adminFeatures": [],
+	"type": "visualization",
+	"startMode": "daemon",
+	"connectionType": "local",
+	"dataSource": "poll",
+	"connectionIndicator": "no",
+	"language": "TypeScript",
+	"adminReact": "no",
+	"tools": [
+		"ESLint"
+	],
+	"indentation": "Tab",
+	"quotes": "single",
+	"es6class": "yes",
+	"authorName": "hawkoon",
+	"authorGithub": "hawkoon",
+	"authorEmail": "hoelkeskamp@googlemail.com",
+	"gitRemoteProtocol": "HTTPS",
+	"gitCommit": "no",
+	"license": "MIT License",
+	"ci": "gh-actions",
+	"dependabot": "no",
+	"creatorVersion": "1.31.0"
+}
