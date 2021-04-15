@@ -28,7 +28,7 @@ $.extend(
 // this code can be placed directly in flyout-menu.html
 vis.binds['flyout-menu'] = {
 
-	version: '0.0.1',
+	version: '0.0.5',
 	menuWidth: '250px',
 
 	showVersion: function () {
@@ -37,8 +37,12 @@ vis.binds['flyout-menu'] = {
 			vis.binds['flyout-menu'].version = null;
 		}
 	},
+
 	createWidget: function (widgetID, view, data, style) {
 
+        const logElement = $('<div id="log" style="position:absolute; top:0; left:0; width:100%; height:200px;color:#FFFFFF">Log:<br/></div>')
+        	logElement.appendTo(document.body);
+        	console.log('-----------------------',logElement);
 		const _this = this;
 		try{
 
@@ -46,7 +50,8 @@ vis.binds['flyout-menu'] = {
                 this.menuWidth = (data.attr('menuWidth') || 250) + 'px';
             }
 
-            log('Find widet id');
+            log('Find widget id');
+            log('--------------------------------------');
             var $div = $('#' + widgetID);
             // if nothing found => wait
             if (!$div.length) {
@@ -74,9 +79,8 @@ vis.binds['flyout-menu'] = {
         }
 
         function log(logText) {
-            console.log(logText);
-           const element = $('#log');
-            element && element.append(logText).append($('</br>'))
+            console.log(logText, this.logElement, logElement);
+           this.logElement && this.logElement.append(logText).append($('</br>'));
         }
 
 		function buildMenuContentFromViews(jsonMenuDefinition, menuContent){
