@@ -76,7 +76,7 @@ vis.binds['flyout-menu'] = {
         function log(logText) {
             console.log(logText);
            const element = $('#log');
-            element && element.append($(logText+'</br>'))
+            element && element.append(logText).append($('</br>'))
         }
 
 		function buildMenuContentFromViews(jsonMenuDefinition, menuContent){
