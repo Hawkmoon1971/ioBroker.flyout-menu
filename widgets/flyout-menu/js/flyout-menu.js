@@ -40,26 +40,32 @@ vis.binds['flyout-menu'] = {
 	createWidget: function (widgetID, view, data, style) {
 
 		const _this = this;
+		try{
 
-		if(data.attr('menuWidth')) {
-			this.menuWidth = (data.attr('menuWidth') || 250) + 'px';
-		}
+            if(data.attr('menuWidth')) {
+                this.menuWidth = (data.attr('menuWidth') || 250) + 'px';
+            }
 
-		var $div = $('#' + widgetID);
-		// if nothing found => wait
-		if (!$div.length) {
-			return setTimeout(function () {
-				vis.binds['flyout-menu'].createWidget(widgetID, view, data, style);
-			}, 100);
-		}
+            var $div = $('#' + widgetID);
+            // if nothing found => wait
+            if (!$div.length) {
+                return setTimeout(function () {
+                    vis.binds['flyout-menu'].createWidget(widgetID, view, data, style);
+                }, 100);
+            }
 
-		if ($div.find('.side-menu-trigger').length) {
-			// the init code will be called twice
-			// so check if the content is already present. Is so, then simply exit.
-			return;
-		}
-		createMenuTrigger($div);
-		createMenu.call(this);
+            if ($div.find('.side-menu-trigger').length) {
+                // the init code will be called twice
+                // so check if the content is already present. Is so, then simply exit.
+                return;
+            }
+            createMenuTrigger($div);
+            createMenu.call(this);
+        } catch (e) {
+            const error = $('<div style="color: #FFFFFF"></div>').append(e);
+            error.appendTo(document.body);
+
+        }
 
 		function buildMenuContentFromViews(jsonMenuDefinition, menuContent){
 			for (let view in vis.views) {
