@@ -59,12 +59,20 @@ vis.binds['flyout-menu'] = {
                 // so check if the content is already present. Is so, then simply exit.
                 return;
             }
+            log('Start create menu');
             createMenuTrigger($div);
+            log('After menu trigger');
             createMenu.call(this);
+            log('createMenu');
         } catch (e) {
-            const error = $('<div style="color: #FFFFFF"></div>').append(e);
-            error.appendTo(document.body);
+           log('error');
+           log(e);
 
+        }
+
+        function log(logText) {
+            element = $('#log');
+            element && element.append($(logText+'</br>'))
         }
 
 		function buildMenuContentFromViews(jsonMenuDefinition, menuContent){
