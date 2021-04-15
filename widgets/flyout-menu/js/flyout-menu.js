@@ -46,6 +46,7 @@ vis.binds['flyout-menu'] = {
                 this.menuWidth = (data.attr('menuWidth') || 250) + 'px';
             }
 
+            log('Find widet id');
             var $div = $('#' + widgetID);
             // if nothing found => wait
             if (!$div.length) {
@@ -54,9 +55,11 @@ vis.binds['flyout-menu'] = {
                 }, 100);
             }
 
+            log('After Find widet id');
             if ($div.find('.side-menu-trigger').length) {
                 // the init code will be called twice
                 // so check if the content is already present. Is so, then simply exit.
+                log('Widget exists: Exit');
                 return;
             }
             log('Start create menu');
@@ -71,7 +74,8 @@ vis.binds['flyout-menu'] = {
         }
 
         function log(logText) {
-            element = $('#log');
+            console.log(logText);
+           const element = $('#log');
             element && element.append($(logText+'</br>'))
         }
 
